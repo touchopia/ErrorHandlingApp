@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ErrorHandlingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9g-HI-Y1P">
+                                <rect key="frame" x="8" y="123" width="398" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtv-Ac-CLl" userLabel="ErrorView">
+                                <rect key="frame" x="0.0" y="808" width="414" height="88"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKp-vS-hVV">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstItem="xKp-vS-hVV" firstAttribute="leading" secondItem="gtv-Ac-CLl" secondAttribute="leading" id="2ju-aO-X6k"/>
+                                    <constraint firstItem="xKp-vS-hVV" firstAttribute="top" secondItem="gtv-Ac-CLl" secondAttribute="top" id="6Cb-Ek-Ceh"/>
+                                    <constraint firstAttribute="bottom" secondItem="xKp-vS-hVV" secondAttribute="bottom" id="6xO-2q-qrm"/>
+                                    <constraint firstAttribute="height" constant="88" id="MPM-V5-WJP"/>
+                                    <constraint firstAttribute="trailing" secondItem="xKp-vS-hVV" secondAttribute="trailing" id="ihH-Hn-kfF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z9g-HI-Y1P" secondAttribute="trailing" constant="8" id="0oZ-er-Ate"/>
+                            <constraint firstItem="z9g-HI-Y1P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="4fQ-3T-Ytg"/>
+                            <constraint firstItem="gtv-Ac-CLl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5wO-JF-3by"/>
+                            <constraint firstAttribute="bottom" secondItem="gtv-Ac-CLl" secondAttribute="bottom" id="6hi-qX-YiT"/>
+                            <constraint firstItem="gtv-Ac-CLl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pxb-Q2-jD9"/>
+                            <constraint firstItem="z9g-HI-Y1P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="79" id="Qs4-RE-fje"/>
+                            <constraint firstItem="z9g-HI-Y1P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kIH-ES-vNh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="errorMessageLabel" destination="xKp-vS-hVV" id="3KR-4B-vVx"/>
+                        <outlet property="playerLabel" destination="z9g-HI-Y1P" id="UFT-fl-miw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159.42028985507247" y="111.83035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
