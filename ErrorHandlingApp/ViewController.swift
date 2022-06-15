@@ -42,12 +42,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapRandomMessage(_ sender: UIButton) {
-        viewModel.playerMessage = "Random Player Message: \(createWord(maxSize: 15))"
+        viewModel.playerMessage = randomMessage(maxSize: 8, maxWordSize: 7)
     }
     
-    private func createWord(maxSize: Int) -> String {
-        var word = ""
+    private func randomMessage(maxSize: Int, maxWordSize: Int) -> String {
+        var message = ""
         for _ in 1...maxSize {
+            message += " \(createWord(maxWordSize: maxWordSize))"
+        }
+        return message
+    }
+    
+    private func createWord(maxWordSize: Int) -> String {
+        var word = ""
+        for _ in 1...maxWordSize {
             let randomChar = String(format: "%c", Int.random(in: 97..<123)) as String
             word += randomChar
         }
