@@ -41,6 +41,14 @@
                                     <constraint firstAttribute="trailing" secondItem="xKp-vS-hVV" secondAttribute="trailing" id="ihH-Hn-kfF"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXS-ew-SWO">
+                                <rect key="frame" x="137.5" y="437.5" width="139" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Random Message"/>
+                                <connections>
+                                    <action selector="didTapRandomMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Etc-YC-zYj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -51,7 +59,9 @@
                             <constraint firstAttribute="bottom" secondItem="gtv-Ac-CLl" secondAttribute="bottom" id="6hi-qX-YiT"/>
                             <constraint firstItem="gtv-Ac-CLl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pxb-Q2-jD9"/>
                             <constraint firstItem="z9g-HI-Y1P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="79" id="Qs4-RE-fje"/>
+                            <constraint firstItem="mXS-ew-SWO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="UKI-mb-zaJ"/>
                             <constraint firstItem="z9g-HI-Y1P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kIH-ES-vNh"/>
+                            <constraint firstItem="mXS-ew-SWO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xrV-Ny-G8g"/>
                         </constraints>
                     </view>
                     <connections>
